@@ -1,0 +1,13 @@
+<div class="col-md-8 col-md-offset-2">
+    <form ngNativeValidate [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" formControlName="email">
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="password">
+        </div>
+        <button [disabled]="!myForm.valid" class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>
